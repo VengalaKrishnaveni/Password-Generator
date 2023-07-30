@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="title a">Generate a</div>
+        <div class="title b">random password</div>
+        <p class="desc">Never use an insecure password again.</p>
+        <div class="length">
+          <input class ="length" id="length" type="number" placeholder="Enter password size" >
+        </div>      
+        <div class="toggle-bars">
+          <div class="bar">
+            <div class="include-symbols">Include symbols to your password<br>Example: gh_ij@y+</div>
+            <label class="toggle" for="symbols">
+              <input type="checkbox" class="toggle__input" id="symbols" />
+              <span class="toggle-track">
+                <span class="toggle-indicator">
+                  <span class="checkMark">
+                    <svg viewBox="0 0 24 24" id="ghq-svg-check" role="presentation" aria-hidden="true">
+                      <path d="M9.86 18a1 1 0 01-.73-.32l-4.86-5.17a1.001 1.001 0 011.46-1.37l4.12 4.39 8.41-9.2a1 1 0 111.48 1.34l-9.14 10a1 1 0 01-.73.33h-.01z"></path>
+                  </svg>
+                  </span>
+                </span>
+              </span>
+            </label>
+          </div>
+          <div class="bar">
+            <div class="include-numbers">Include numbers to your password<br>
+            Example: op82bg0k</div>
+            <label class="toggle" for="numbers">
+              <input type="checkbox" class="toggle__input" id="numbers" />
+              <span class="toggle-track">
+                <span class="toggle-indicator">
+                  <span class="checkMark">
+                    <svg viewBox="0 0 24 24" id="ghq-svg-check" role="presentation" aria-hidden="true">
+                      <path d="M9.86 18a1 1 0 01-.73-.32l-4.86-5.17a1.001 1.001 0 011.46-1.37l4.12 4.39 8.41-9.2a1 1 0 111.48 1.34l-9.14 10a1 1 0 01-.73.33h-.01z"></path>
+                  </svg>
+                  </span>
+                </span>
+              </span>
+            </label>
+          </div>   
+        </div>
+        <div class="include-symbols-numbers">Select both the options to add both the symbols and numbers<br>
+        Example: rt6*gh%23</div>
+        <div class="buttons">
+          <button id="password-btn" onclick="password()">Generate password</button>
+          <button id="clear-btn" onclick="reset()">Clear</button>
+        </div>
+        
+        <div class="fields">
+          <div class="field">
+            <div class="field-a" id="field-a"></div>
+            <div class="copy-icon" onclick="copyToClipboard('field-a')"><svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 384 512" fill="#10B981"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M192 0c-41.8 0-77.4 26.7-90.5 64H64C28.7 64 0 92.7 0 128V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V128c0-35.3-28.7-64-64-64H282.5C269.4 26.7 233.8 0 192 0zm0 64a32 32 0 1 1 0 64 32 32 0 1 1 0-64zM112 192H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg></div>  
+          </div>
+          <div class="field">
+            <div class="field-b" id="field-b"></div>
+            <div class="copy-icon" onclick="copyToClipboard('field-b')"><svg xmlns="http://www.w3.org/2000/svg" height="1.5em" fill="#10B981" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M192 0c-41.8 0-77.4 26.7-90.5 64H64C28.7 64 0 92.7 0 128V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V128c0-35.3-28.7-64-64-64H282.5C269.4 26.7 233.8 0 192 0zm0 64a32 32 0 1 1 0 64 32 32 0 1 1 0-64zM112 192H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg></div>
+            </div>
+          </div>
+        </div>
+    <script src="index.js"></script>
+</body>
+</html>
