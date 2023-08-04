@@ -185,7 +185,7 @@ button{
   padding: 15px;
   background-color: #273549;
   border-radius: 5px;
-  word-break: break-word;
+  word-break: break-all;
   color: #10B981;
   font-size: 18px;
 }
